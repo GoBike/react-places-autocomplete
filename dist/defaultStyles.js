@@ -6,7 +6,8 @@ Object.defineProperty(exports, "__esModule", {
 var defaultStyles = {
   root: {
     position: 'relative',
-    paddingBottom: '0px'
+    paddingBottom: '0px',
+    zIndex: '1'
   },
   input: {
     display: 'inline-block',

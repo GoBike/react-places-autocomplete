@@ -334,7 +334,7 @@ var PlacesAutocomplete = function (_Component) {
           id: 'PlacesAutocomplete__root',
           style: this.inlineStyleFor('root'),
           className: this.classNameFor('root') },
-        inputProps.lines && inputProps.lines > 1 ? _react2.default.createElement('textarea', _extends({ rows: inputProps.lines }, inputProps)) : _react2.default.createElement('input', inputProps),
+        this.props.lines && this.props.lines > 1 ? _react2.default.createElement('textarea', _extends({ rows: this.props.lines }, inputProps)) : _react2.default.createElement('input', inputProps),
         autocompleteItems.length > 0 && _react2.default.createElement(
           'div',
           {
