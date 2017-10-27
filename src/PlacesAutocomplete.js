@@ -255,7 +255,7 @@ class PlacesAutocomplete extends Component {
         id="PlacesAutocomplete__root"
         style={this.inlineStyleFor('root')}
         className={this.classNameFor('root')}>
-        {inputProps.lines && inputProps.lines > 1 ? <textarea rows={inputProps.lines} {...inputProps} /> : <input {...inputProps} />}
+        {this.props.lines && this.props.lines > 1 ? <textarea rows={this.props.lines} {...inputProps} /> : <input {...inputProps} />}
         {autocompleteItems.length > 0 && (
           <div
             id="PlacesAutocomplete__autocomplete-container"

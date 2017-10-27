@@ -30,6 +30,9 @@ module.exports = {
       }
     ]
   },
+  devServer: {
+    port: 8089,
+  },
   plugins: process.argv.indexOf('-p') !== -1 ? [
     new CopyWebpackPlugin([
       { from: './demo/app.css' },

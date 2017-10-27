@@ -121,6 +121,7 @@ class Demo extends React.Component {
             autocompleteItem={AutocompleteItem}
             onEnterKeyDown={this.handleSelect}
             classNames={cssClasses}
+            lines={2}
             inputProps={inputProps}
           />
           {this.state.loading ? <div><i className="fa fa-spinner fa-pulse fa-3x fa-fw Demo__spinner" /></div> : null}
