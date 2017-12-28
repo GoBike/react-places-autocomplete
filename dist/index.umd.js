@@ -199,14 +199,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  }, {
 	    key: 'selectAddress',
-	    value: function selectAddress(address, placeId) {
+	    value: function selectAddress(address, placeId, formattedSuggestion) {
 	      this.clearAutocomplete();
-	      this.handleSelect(address, placeId);
+	      this.handleSelect(address, placeId, formattedSuggestion);
 	    }
 	  }, {
 	    key: 'handleSelect',
-	    value: function handleSelect(address, placeId) {
-	      this.props.onSelect ? this.props.onSelect(address, placeId) : this.props.inputProps.onChange(address);
+	    value: function handleSelect(address, placeId, formattedSuggestion) {
+	      this.props.onSelect ? this.props.onSelect(address, placeId, formattedSuggestion) : this.props.inputProps.onChange(address);
 	    }
 	  }, {
 	    key: 'getActiveItem',
@@ -231,7 +231,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (activeItem === undefined) {
 	        this.handleEnterKeyWithoutActiveItem();
 	      } else {
-	        this.selectAddress(activeItem.suggestion, activeItem.placeId);
+	        this.selectAddress(activeItem.suggestion, activeItem.placeId, activeItem.formattedSuggestion);
 	      }
 	    }
 	  }, {
