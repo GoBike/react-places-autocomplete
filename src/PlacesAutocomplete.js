@@ -74,13 +74,13 @@ class PlacesAutocomplete extends Component {
     this.setState({ autocompleteItems: [] })
   }
 
-  selectAddress(address, placeId) {
+  selectAddress(address, placeId, formattedSuggestion) {
     this.clearAutocomplete()
-    this.handleSelect(address, placeId)
+    this.handleSelect(address, placeId, formattedSuggestion)
   }
 
-  handleSelect(address, placeId) {
-    this.props.onSelect ? this.props.onSelect(address, placeId) : this.props.inputProps.onChange(address)
+  handleSelect(address, placeId, formattedSuggestion) {
+    this.props.onSelect ? this.props.onSelect(address, placeId, formattedSuggestion) : this.props.inputProps.onChange(address)
   }
 
   getActiveItem() {
@@ -98,7 +98,7 @@ class PlacesAutocomplete extends Component {
     if (activeItem === undefined) {
       this.handleEnterKeyWithoutActiveItem()
     } else {
-      this.selectAddress(activeItem.suggestion, activeItem.placeId)
+      this.selectAddress(activeItem.suggestion, activeItem.placeId, activeItem.formattedSuggestion)
     }
   }
 
@@ -268,8 +268,8 @@ class PlacesAutocomplete extends Component {
                 onMouseDown={() => this.selectAddress(p.suggestion, p.placeId, p.formattedSuggestion)}
                 onTouchStart={() => this.setActiveItemAtIndex(p.index)}
                 onTouchEnd={() => this.selectAddress(p.suggestion, p.placeId, p.formattedSuggestion)}
-                style={ p.active ? this.inlineStyleFor('autocompleteItem', 'autocompleteItemActive') :this.inlineStyleFor('autocompleteItem') }
-                className={ p.active ? this.classNameFor('autocompleteItem', 'autocompleteItemActive') : this.classNameFor('autocompleteItem') }>
+                style={p.active ? this.inlineStyleFor('autocompleteItem', 'autocompleteItemActive') : this.inlineStyleFor('autocompleteItem')}
+                className={p.active ? this.classNameFor('autocompleteItem', 'autocompleteItemActive') : this.classNameFor('autocompleteItem')}>
                 {this.props.autocompleteItem({ suggestion: p.suggestion, formattedSuggestion: p.formattedSuggestion })}
               </div>
             ))}
