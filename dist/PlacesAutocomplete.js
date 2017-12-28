@@ -350,13 +350,13 @@ var PlacesAutocomplete = function (_Component) {
                   return _this3.setActiveItemAtIndex(p.index);
                 },
                 onMouseDown: function onMouseDown() {
-                  return _this3.selectAddress(p.suggestion, p.placeId);
+                  return _this3.selectAddress(p.suggestion, p.placeId, p.formattedSuggestion);
                 },
                 onTouchStart: function onTouchStart() {
                   return _this3.setActiveItemAtIndex(p.index);
                 },
                 onTouchEnd: function onTouchEnd() {
-                  return _this3.selectAddress(p.suggestion, p.placeId);
+                  return _this3.selectAddress(p.suggestion, p.placeId, p.formattedSuggestion);
                 },
                 style: p.active ? _this3.inlineStyleFor('autocompleteItem', 'autocompleteItemActive') : _this3.inlineStyleFor('autocompleteItem'),
                 className: p.active ? _this3.classNameFor('autocompleteItem', 'autocompleteItemActive') : _this3.classNameFor('autocompleteItem') },
