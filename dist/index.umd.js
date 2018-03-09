@@ -411,10 +411,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return _react2.default.createElement(
 	        'div',
 	        {
-	          id: 'PlacesAutocomplete__root',
+	          id: 'PlacesAutocomplete__root' + (this.props.index ? '_' + this.props.index : ""),
 	          style: this.inlineStyleFor('root'),
 	          className: this.classNameFor('root') },
-	        this.props.lines && this.props.lines > 1 ? _react2.default.createElement('textarea', _extends({ rows: this.props.lines }, inputProps)) : _react2.default.createElement('input', inputProps),
+	        this.props.lines && this.props.lines > 1 ? _react2.default.createElement('textarea', _extends({ id: 'PlacesAutocomplete_textarea' + (this.props.index ? '_' + this.props.index : ""), rows: this.props.lines }, inputProps)) : _react2.default.createElement('input', _extends({ id: 'PlacesAutocomplete_input' + (this.props.index ? '_' + this.props.index : "") }, inputProps)),
 	        autocompleteItems.length > 0 && _react2.default.createElement(
 	          'div',
 	          {
