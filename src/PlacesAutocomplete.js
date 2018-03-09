@@ -252,10 +252,10 @@ class PlacesAutocomplete extends Component {
 
     return (
       <div
-        id="PlacesAutocomplete__root"
+        id={`PlacesAutocomplete__root${this.props.index ? `_${this.props.index}`: ""}`}
         style={this.inlineStyleFor('root')}
         className={this.classNameFor('root')}>
-        {this.props.lines && this.props.lines > 1 ? <textarea rows={this.props.lines} {...inputProps} /> : <input {...inputProps} />}
+        {this.props.lines && this.props.lines > 1 ? <textarea id={`PlacesAutocomplete_textarea${this.props.index ? `_${this.props.index}`: ""}`} rows={this.props.lines} {...inputProps} /> : <input id={`PlacesAutocomplete_input${this.props.index ? `_${this.props.index}`: ""}`} {...inputProps} />}
         {autocompleteItems.length > 0 && (
           <div
             id="PlacesAutocomplete__autocomplete-container"
