@@ -334,7 +334,7 @@ var PlacesAutocomplete = function (_Component) {
           id: 'PlacesAutocomplete__root' + (this.props.index !== null || this.props.index !== undefined ? '_' + this.props.index : ""),
           style: this.inlineStyleFor('root'),
           className: this.classNameFor('root') },
-        this.props.lines && this.props.lines > 1 ? _react2.default.createElement('textarea', _extends({ id: 'PlacesAutocomplete_textarea' + (this.props.index !== null || this.props.index !== undefined ? '_' + this.props.index : ""), rows: this.props.lines }, inputProps)) : _react2.default.createElement('input', _extends({ id: 'PlacesAutocomplete_input' + (this.props.index !== null || this.props.index !== undefined ? '_' + this.props.index : "") }, inputProps)),
+        _react2.default.createElement('textarea', _extends({ id: 'PlacesAutocomplete_textarea' + (this.props.index !== null || this.props.index !== undefined ? '_' + this.props.index : ""), rows: this.props.rowLines }, inputProps)),
         autocompleteItems.length > 0 && _react2.default.createElement(
           'div',
           {
