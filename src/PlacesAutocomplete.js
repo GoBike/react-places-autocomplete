@@ -255,9 +255,7 @@ class PlacesAutocomplete extends Component {
         id={`PlacesAutocomplete__root${this.props.index !==null || this.props.index !== undefined ? `_${this.props.index}`: ""}`}
         style={this.inlineStyleFor('root')}
         className={this.classNameFor('root')}>
-        {this.props.lines && this.props.lines > 1 ? 
-          <textarea id={`PlacesAutocomplete_textarea${this.props.index !==null || this.props.index !==undefined ? `_${this.props.index}`: ""}`} rows={this.props.lines} {...inputProps} /> 
-          : <input id={`PlacesAutocomplete_input${this.props.index !==null || this.props.index !==undefined ? `_${this.props.index}`: ""}`} {...inputProps} />}
+        <textarea id={`PlacesAutocomplete_textarea${this.props.index !==null || this.props.index !==undefined ? `_${this.props.index}`: ""}`} rows={this.props.rowLines} {...inputProps} /> 
         {autocompleteItems.length > 0 && (
           <div
             id="PlacesAutocomplete__autocomplete-container"
