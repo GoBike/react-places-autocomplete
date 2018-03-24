@@ -362,19 +362,7 @@ var PlacesAutocomplete = function (_Component) {
                 className: p.active ? _this3.classNameFor('autocompleteItem', 'autocompleteItemActive') : _this3.classNameFor('autocompleteItem') },
               _this3.props.autocompleteItem({ suggestion: p.suggestion, formattedSuggestion: p.formattedSuggestion })
             );
-          }),
-          this.props.googleLogo && _react2.default.createElement(
-            'div',
-            {
-              id: 'PlacesAutocomplete__google-logo',
-              style: this.inlineStyleFor('googleLogoContainer'),
-              className: this.classNameFor('googleLogoContainer') },
-            _react2.default.createElement('img', {
-              src: require('./images/powered_by_google_' + this.props.googleLogoType + '.png'),
-              style: this.inlineStyleFor('googleLogoImage'),
-              className: this.classNameFor('googleLogoImage')
-            })
-          )
+          })
         )
       );
     }
