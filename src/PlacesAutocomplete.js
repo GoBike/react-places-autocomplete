@@ -273,18 +273,6 @@ class PlacesAutocomplete extends Component {
                 {this.props.autocompleteItem({ suggestion: p.suggestion, formattedSuggestion: p.formattedSuggestion })}
               </div>
             ))}
-            {this.props.googleLogo && (
-              <div
-                id="PlacesAutocomplete__google-logo"
-                style={this.inlineStyleFor('googleLogoContainer')}
-                className={this.classNameFor('googleLogoContainer')}>
-                <img
-                  src={require(`./images/powered_by_google_${this.props.googleLogoType}.png`)}
-                  style={this.inlineStyleFor('googleLogoImage')}
-                  className={this.classNameFor('googleLogoImage')}
-                />
-              </div>)
-            }
           </div>
         )}
       </div>
